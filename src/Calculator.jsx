@@ -21,7 +21,7 @@ function Calculator(){
 
    
 
-    const calcultaeDiscout = (e) => {
+    const calculateDiscout = (e) => {
         let priceYouSave = originalPrice * discount / 100
         let priceToPay = originalPrice - priceYouSave
 
@@ -53,7 +53,7 @@ function Calculator(){
                             <Slider defaultValue={0} onChange={(e) => setDiscount(e.target.value)} aria-label="Default"  className='text-warning'/> 
                         </div>
                         <div className='text-center'>
-                            <Button variant="contained" onClick={e => calcultaeDiscout(e)} className='bg-warning'>Calculate</Button>
+                            <Button variant="contained" onClick={e => calculateDiscout(e)}>Calculate</Button>
                         </div>
                         
                     </div>
@@ -69,7 +69,7 @@ function Calculator(){
 
                             </div>
                             <div className='text-center'>
-                                <Button variant="outlined" onClick={e => resetValue(e)}>Reset</Button>
+                                <Button variant="outlined"  onClick={e => resetValue(e)}>Reset</Button>
                             </div>
 
 
