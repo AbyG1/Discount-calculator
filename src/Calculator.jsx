@@ -19,8 +19,7 @@ function Calculator(){
     const [finalPrice,setFinalPrice] = useState(0);
     const [savedPrice,setSavedPrice] = useState(0)
 
-    console.log(originalPrice)
-    console.log(discount)
+   
 
     const calcultaeDiscout = (e) => {
         let priceYouSave = originalPrice * discount / 100
@@ -32,6 +31,8 @@ function Calculator(){
 
     const resetValue = (e) => {
         setOriginalPrice(0)
+        setFinalPrice(0)
+        setSavedPrice(0)
         
     }
 
@@ -44,7 +45,7 @@ function Calculator(){
                     <div className="col-lg-4 mb-5 ">
                         <div className='text-center mb-5'>
                             <h2 className='text-light'>Original price</h2>
-                            <TextField type='number' onChange={(e) => setOriginalPrice(e.target.value)} id="outlined-basic"  variant="outlined" className='yellow' />
+                            <TextField type='number' value={originalPrice||""} onChange={(e) => setOriginalPrice(e.target.value)} id="outlined-basic"  variant="outlined" className='yellow' />
                         </div>
                         <div className='text-center mb-2'>
                             <h2 className='text-light'>Discount</h2>
